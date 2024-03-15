@@ -1,0 +1,87 @@
+-- Booting Library
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+
+
+-- Functions
+_G.Key = "abood-991"
+_G.KeyInput = "string"
+
+function DestroyGui()
+    OrionLib:Destroy()
+end
+
+function Menu()
+    loadstring(game:HttpGet('https://pastebin.com/raw/dcyuEgyK'))()
+end
+
+
+-- Creating Window
+local Window = OrionLib:MakeWindow({Name = "سكربت دبل pop it trading", HidePremium = false, IntroEnabled = false})
+
+
+-- Creating Tabs
+local tab1 = Window:MakeTab({
+	Name = "الكود",
+	Icon = "",
+	PremiumOnly = false
+})
+
+local tab2 = Window:MakeTab({
+	Name = "غلاق",
+	Icon = "",
+	PremiumOnly = false
+})
+
+
+-- Config Tab1
+local Section1 = tab1:AddSection({
+	Name = "كود"
+})
+
+tab1:AddTextbox({
+	Name = "حط كود",
+	Default = "",
+	TextDisappear = false,
+	Callback = function(Value)
+         _G.KeyInput = Value
+	end	  
+})
+
+tab1:AddButton({
+	Name = "فتح",
+	Callback = function()
+        if _G.KeyInput == _G.Key then
+            OrionLib:MakeNotification({
+	        Name = "Correct key",
+	        Content = "scrit loading",
+	        Image = "",
+	        Time = 1.5
+            })
+        wait(1.5)
+        Menu()
+    end
+	end    
+})
+
+-- Config Tab2
+local Section1 = tab2:AddSection({
+	Name = "🤑🤑🤑"
+})
+
+
+
+
+
+local Section1 = tab2:AddSection({
+	Name = "abood_nazmi"
+})
+
+tab2:AddButton({
+	Name = "لو تبي كود كلام abood_nazmi في دسكورد",
+	Callback = function()
+	    wait(0.5)
+	    DestroyGui()
+	end    
+})
+-- Script End
+OrionLib:Init()
